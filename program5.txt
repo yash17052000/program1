@@ -1,0 +1,45 @@
+import java.util.*;
+ // Java program to find GCD of n numbers..
+
+import java.util.Scanner;
+
+class Main
+{
+public static void main(String arg[])	
+{	
+  {
+   // taking the size of a array  from user..
+    Scanner sc=new Scanner(System.in);
+    int t=sc.nextInt();
+    for(int p=1;p<=t;p++)
+    {
+    int number=sc.nextInt();
+    // now taing values from user..
+    long  arr[]=new long[number];
+    
+    for(int i=0;i<number;i++)
+    {
+	arr[i]=sc.nextLong();     
+     }
+     long result = arr[0];
+     for(int i = 1; i < arr.length; i++)
+     {
+     result= gcd(result, arr[i]);
+     }     
+     System.out.println(result);
+  }
+  }
+}
+// Finding GCD in gcd fucntion..
+
+static long gcd(long a,long b)
+  {
+    while (b > 0)
+    {
+        long temp = b;
+        b = a % b; 
+        a = temp;
+    }
+    return a;
+   }
+}
