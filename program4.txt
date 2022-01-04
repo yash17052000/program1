@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+class Main {
+    public static void main(String[] args)  {
+        
+        Scanner scn=new Scanner(System.in);
+        int T =scn.nextInt();
+        for (int t_i = 0; t_i < T; t_i++) {
+            int N =scn.nextInt(); 
+            int i,j,f=0;
+for(j=2;j<=Math.sqrt(N);j++)
+{
+    if(N%j==0)
+    {
+        f++;
+    break;
+    }
+   }
+   if(f==0)
+  System.out.println("No");
+   else if(f==1)
+    System.out.println("Yes"); 
+}
+}
+}
