@@ -27,3 +27,43 @@ String s3=s1.toString();
 
     }
 }
+
+...............................................
+lass Solution {
+    public boolean isPalindrome(String s) {
+       String s1=" ";
+boolean flag=true;
+int i,j;
+        s=s.toLowerCase();
+         s=s.replaceAll("[^A-Za-z0-9]","");
+        int l=0;
+        int h=s.length()-1;
+       
+        if(l==0&&h==-1)
+            flag=true;
+else
+{
+        while(l<h)
+        {
+            if(l==0&&h==-1)
+            flag=true;
+            else if(s.charAt(l)==s.charAt(h))
+            {
+                flag=true;
+               }
+            
+            else if(s.charAt(l)!=s.charAt(h))
+            {
+                flag=false;
+                break;
+            }
+                
+            
+                l++;
+                h--;
+            
+        }
+}
+        return flag;
+            }
+}
