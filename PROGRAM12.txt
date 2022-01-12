@@ -28,8 +28,8 @@ String s3=s1.toString();
     }
 }
 
-...............................................
-lass Solution {
+second..
+class Solution {
     public boolean isPalindrome(String s) {
        String s1=" ";
 boolean flag=true;
